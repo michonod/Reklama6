@@ -1,4 +1,3 @@
-import { StarFilled } from "@ant-design/icons";
 import React from "react";
 import {
   First,
@@ -9,7 +8,9 @@ import {
   Text,
   RedText,
   FlexText,
+  Star,
 } from "./styles";
+import Link from "next/link";
 
 const stars = Array.from({ length: 5 });
 
@@ -21,17 +22,19 @@ const MiddleSection = () => {
         <Div>
           <Text>Macedonia</Text>
           {stars.map(() => (
-            <StarFilled />
+            <Star />
           ))}
         </Div>
       </Container>
       <Text>320019 Огласи</Text>
-      <Container role="button">
-        <Plus />
-        <FlexText>
-          Внеси нов оглас <br /> <RedText>бесплатно</RedText>
-        </FlexText>
-      </Container>
+      <Link href="/">
+        <Container role="button">
+          <Plus />
+          <FlexText>
+            Внеси нов оглас <br /> <RedText>бесплатно</RedText>
+          </FlexText>
+        </Container>
+      </Link>
     </MiddleContainer>
   );
 };

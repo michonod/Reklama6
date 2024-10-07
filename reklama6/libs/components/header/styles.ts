@@ -1,4 +1,8 @@
-import { DropboxOutlined, PlusCircleOutlined } from "@ant-design/icons";
+import {
+  DropboxOutlined,
+  PlusCircleOutlined,
+  StarFilled,
+} from "@ant-design/icons";
 import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
@@ -22,18 +26,20 @@ export const First = styled.div`
   border-radius: 50%;
   height: 30px;
   width: 30px;
-  border: 1px solid black;
-  background-color: #333333;
+  border: 1px solid ${({ theme }) => theme.colors.gold.primary};
+  background-color: ${({ theme }) => theme.colors.gold.primary};
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 8px;
+  font-size: 20px;
+  font-weight: 800;
 `;
 
 export const Plus = styled(PlusCircleOutlined)`
   font-size: 30px;
-  color: burlywood;
+  color: ${({ theme }) => theme.colors.blue.secondary};
   margin-right: 10px;
 `;
 
@@ -60,6 +66,10 @@ export const RightContainer = styled.div`
   margin-right: 30px;
   button {
     margin-left: 5px;
+    :hover {
+      color: black;
+      transition: color 0.5s ease, transform 0.5 ease; /* Smooth transitions */
+    }
   }
 `;
 
@@ -87,4 +97,8 @@ export const FlexText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+`;
+
+export const Star = styled(StarFilled)`
+  color: ${({ theme }) => theme.colors.gold.primary};
 `;

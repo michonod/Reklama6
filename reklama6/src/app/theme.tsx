@@ -1,9 +1,15 @@
 import React, { ReactNode } from "react";
-import { DefaultTheme, ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 
 interface ThemeInterface {
   colors: {
-    primary: string;
+    blue: {
+      primary: string;
+      secondary: string;
+    };
+    gold: {
+      primary: string;
+    };
   };
 }
 
@@ -13,7 +19,13 @@ declare module "styled-components" {
 
 const theme: ThemeInterface = {
   colors: {
-    primary: "#0070f3",
+    blue: {
+      primary: "#0070f3",
+      secondary: "#3c8ac2",
+    },
+    gold: {
+      primary: "#f7d034",
+    },
   },
 };
 
