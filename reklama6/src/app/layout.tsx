@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
 import "./globals.css";
-
-const font = Montserrat({ subsets: ["latin"] });
+import { Root } from "./root";
 
 export const metadata: Metadata = {
   title: "Oglasi | Reklama6.dk | Огласи | Автомобили | Недвижнини",
@@ -14,9 +12,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={font.className}>{children}</body>
-    </html>
-  );
+  return <Root children={children} />;
 }
