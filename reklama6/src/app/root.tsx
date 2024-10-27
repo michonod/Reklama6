@@ -3,6 +3,8 @@ import { Montserrat } from "next/font/google";
 import Theme from "./theme";
 import dynamic from "next/dynamic";
 import { Loading } from "@components";
+import { Provider } from "react-redux";
+import { store } from "../../libs/store/store";
 const font = Montserrat({ subsets: ["latin"] });
 
 const Header = dynamic(() => import("../../libs/components/header/Header"), {
@@ -13,12 +15,14 @@ const Header = dynamic(() => import("../../libs/components/header/Header"), {
 export const Root = ({ children }: { children: React.ReactNode }) => {
   return (
     <Theme>
-      <html lang="en">
-        <body className={font.className}>
-          <Header />
-          {children}
-        </body>
-      </html>
+      <Provider store={store}>
+        <html lang="en">
+          <body className={font.className}>
+            <Header />
+            {children}
+          </body>
+        </html>
+      </Provider>
     </Theme>
   );
 };
