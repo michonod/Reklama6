@@ -1,1 +1,1 @@
-export { Header } from "../components/header/Header";
+export { Loading } from "../components/loading/Loading";

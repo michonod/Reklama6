@@ -4,7 +4,7 @@ import MiddleSection from "./MiddleSection";
 import { RightSection } from "./RightSection";
 import { HeaderContainer } from "./styles";
 
-export const Header = () => {
+const Header = () => {
   return (
     <HeaderContainer>
       <LeftSection />
@@ -13,3 +13,5 @@ export const Header = () => {
     </HeaderContainer>
   );
 };
+
+export default Header;

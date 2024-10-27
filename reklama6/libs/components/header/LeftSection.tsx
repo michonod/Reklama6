@@ -7,7 +7,7 @@ const LeftSection = () => {
     <LeftContainer>
       <Logo />
       <SiteName>
-        <Link href="/products">Reklama5</Link>
+        <Link href="/products">Reklama6</Link>
       </SiteName>
       <LinkContainer>
         <Link href="">Сите огласи</Link>
